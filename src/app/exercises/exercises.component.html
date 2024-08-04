@@ -1,0 +1,30 @@
+
+
+<section id="exercise-search">
+    <header>
+        <h2>Exercises</h2>
+    </header>
+    <div class="new-link" data-exercise="New Workout">
+        <p>New</p>
+    </div>
+    <input type="text" class="search-bar" placeholder="Search">
+    <div class="filters">
+        <button class="filter-button">Any Body Part</button>
+        <button class="filter-button">Any Category</button>
+    </div>
+</section>
+
+<section id="recent-exercises">
+    <h2>Recent</h2>
+    <div class="exercise-list">
+        <div *ngFor="let workout of workouts" class="exercise-card" data-exercise="Iso-Lateral Chest Press (Machine)">
+            <img src="chest-press.png" alt="Chest Press">
+            <div class="exercise-info">
+                <h3>{{workout.name}}</h3>
+                <p>{{workout.bodyPart}}</p>
+                <p>null</p>
+            </div>
+        </div>
+        <!-- Add more exercise cards as needed -->
+    </div>
+</section>

@@ -1,0 +1,35 @@
+<div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p>New Template</p>
+        <button class="add-btn"
+        [disabled]='!isAnyWorkoutSelected()'
+        (click)="addSelectedWorkouts()">Add</button>
+      </div>
+
+      <div id="exercise-search">
+        <input type="text" class="search-bar" placeholder="Search" (input)="onSearch($event)">
+        <div class="filters">
+          <button class="filter-button" (click)="filterByBodyPart()">Any Body Part</button>
+          <button class="filter-button" (click)="filterByCategory()">Any Category</button>
+        </div>
+      </div>
+      
+      <div class="exercise-list-container">
+        <div class="exercise-list" *ngFor="let workout of filteredWorkouts; let i = index" 
+        class="exercise-card"
+        [class.selected]="workout.selected" 
+        (click)="toggleSelection(i)">>
+          <img src="chest-press.png" alt={{workout.name}}>
+          <div class="exercise-info">
+            <h3>{{workout.name}}</h3>
+            <p>{{workout.bodyPart}}</p>
+            <p>{{workout.description}}</p>
+          </div>
+          <div *ngIf="workout.selected" class="checkmark">✔</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

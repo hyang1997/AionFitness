@@ -1,0 +1,36 @@
+<div class="template-header">
+    <button class="close-btn" (click)="hideExerciseModal()">X</button>
+    <p>New Template</p>
+    <button class="save-btn">Save</button>
+  </div>
+  
+  <div class="template-name">
+    <input type="text" placeholder="{{templateName}}" class="template-name-input">
+    <button class="options-btn">...</button>
+  </div>
+  
+  <div class="notes">
+    <input type="text" placeholder="{{notes}}" class="notes-input">
+  </div>
+  
+  <div class="exercise-section" *ngFor="let workout of workoutList">
+    <h3 class="exercise-title">{{workout}}</h3>
+    <div class="exercise-table">
+      <div class="table-header">
+        <div class="table-cell">Set</div>
+        <div class="table-cell">Previous</div>
+        <div class="table-cell">lbs</div>
+        <div class="table-cell">Reps</div>
+      </div>
+    </div>
+    <button class="add-set-btn" (click)="addSet(workout)">+ Add Set</button>
+  </div>
+  
+  <div class="add-exercise">
+    <button class="add-exercise-btn" (click)="showExerciseModal()">Add Exercises</button>
+  </div>
+  
+  <app-add-exercise-modal [showModal]="showModal" (close)="hideExerciseModal()" (workoutListChange)="onWorkoutListChange($event)"></app-add-exercise-modal>
+  
+  <router-outlet></router-outlet>
+  

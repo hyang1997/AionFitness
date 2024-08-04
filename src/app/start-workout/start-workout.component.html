@@ -1,0 +1,36 @@
+<section id="quick-start">
+    <h2>Quick Start</h2>
+    <button class="primary-button">Start an Empty Workout</button>
+</section>
+<section id="templates">
+    <div class="section-header">
+        <h2>Templates</h2>
+        <button [routerLink]="['/template']" class="add-template">+Template</button>
+    </div>
+    <h3>My Templates (3)</h3>
+    <div class="templates-container">
+        <div class="template-card">
+            <h4>Day 3</h4>
+            <p>Incline Bench Press (Dumbbell), Chest Fly, Lateral Raise (Cable), Rear Delt Fly & 1 more...</p>
+            <span class="date">3 days ago</span>
+            <button class="more-options">...</button>
+        </div>
+        <div class="template-card">
+            <h4>Day 2</h4>
+            <p>Incline Curl (Dumbbell), Deadhang, Triceps Cable Pull Down On...</p>
+            <span class="date">13 days ago</span>
+            <button class="more-options">...</button>
+        </div>
+        <div class="template-card">
+            <h4>Day 1</h4>
+            <p>Pull Up, Seated Overhead Press (Dumbbell), Seated Row (Cable) and Incl...</p>
+            <span class="date">5 days ago</span>
+            <button class="more-options">...</button>
+        </div>
+    </div>
+    <h3>Example Templates (5)</h3>
+    <div class="templates-container">
+        <!-- Example templates go here -->
+    </div>
+</section>
+<router-outlet></router-outlet>
