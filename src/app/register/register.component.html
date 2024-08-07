@@ -1,0 +1,40 @@
+<div class="auth-container">
+  <div class="auth-header">
+    <h1>AION FITNESS</h1>
+    <p>Welcome back!</p>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input id="email" formControlName="email" type="email" placeholder="name@email.com" />
+    </div>
+    <div class="form-group">
+      <input id="password" formControlName="password" type="password" placeholder="Password" />
+    </div>
+    <div class="form-actions">
+      <label>
+        <input type="checkbox" (change)="toggleRememberMe()" [checked]="rememberMe" /> Remember me
+      </label>
+      <a href="#" class="reset-password" (click)="resetPassword()">Reset password</a>
+    </div>
+    <button type="submit" [disabled]="form.invalid" class="sign-in-button">{{ mode === 'register' ? 'Sign up' : 'Sign in' }}</button>
+  </form>
+
+  <p class="signup-link">
+    Don't have an account? <a href="#" (click)="setMode('register')">Sign up</a>
+  </p>
+
+  <div class="divider">or</div>
+
+  <button (click)="loginWithGoogle()" class="google-login">
+    <img src="assets/google-icon.png" alt="Google Icon" />
+    Continue with Google
+  </button>
+
+  <div *ngIf="resetMessage" class="reset-message">
+    {{ resetMessage }}
+  </div>
+  <div *ngIf="verificationMessage" class="verification-message">
+    {{ verificationMessage }}
+  </div>
+</div>

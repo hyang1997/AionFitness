@@ -1,0 +1,142 @@
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #007BFF; /* Electric Blue */
+  }
+
+  p {
+    margin: 0.5rem 0 0;
+    color: #777; /* Gray */
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    color: #000;
+    input {
+      margin-right: 0.5rem;
+      
+    }
+  }
+
+  .reset-password {
+    font-size: 0.875rem;
+    color: #007BFF; /* Electric Blue */
+    text-decoration: none;
+  }
+}
+
+.sign-in-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #32CD32; /* Lime Green */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background-color: #28a745; /* Slightly darker green */
+  }
+}
+
+.signup-link {
+  margin: 1rem 0;
+  font-size: 0.875rem;
+  color: #000;
+  a {
+    color: #007BFF; /* Electric Blue */
+    text-decoration: none;
+  }
+}
+
+.divider {
+  position: relative;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777; /* Gray */
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ccc;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
+.google-login,
+.twitter-login {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+
+  img {
+    width: 20px; /* Adjust the size of the icons */
+    height: 20px; /* Adjust the size of the icons */
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+}

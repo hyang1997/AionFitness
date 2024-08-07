@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HistoryComponent } from './history/history.component';
 import { StartWorkoutComponent } from './start-workout/start-workout.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { BaseModalComponent } from './base-modal/base-modal.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-
+import { AuthService } from './auth.service';
+import { RegisterComponent } from "./register/register.component";
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,14 +17,25 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     BaseModalComponent,
     RouterLinkActive,
     StartWorkoutComponent,
-    CommonModule
-  ],
+    CommonModule,
+    RegisterComponent,
+    NgIf
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   showModal: boolean = false;
   modalContent: string = '';
+  constructor(private authService: AuthService) {}
+
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
+
+  logout(): void {
+    this.authService.logout();
+  }
   workouts = [
     { id: 1, name: 'Squat', description: 'Squats are great for leg strength.' },
     { id: 2, name: 'Bench Press', description: 'Bench presses are great for chest strength.' }
