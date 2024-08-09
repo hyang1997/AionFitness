@@ -184,3 +184,21 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #2c2c2e;
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+.mat-icon {
+  fill: #005cbb;
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+}
