@@ -7,6 +7,10 @@ import { BaseModalComponent } from './base-modal/base-modal.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthService } from './auth.service';
 import { RegisterComponent } from "./register/register.component";
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -19,7 +23,10 @@ import { RegisterComponent } from "./register/register.component";
     StartWorkoutComponent,
     CommonModule,
     RegisterComponent,
-    NgIf
+    NgIf,
+    MatButtonModule, 
+    MatDividerModule, 
+    MatIconModule
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

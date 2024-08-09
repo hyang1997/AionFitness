@@ -7,11 +7,31 @@
   (close)="closeModal()">
 </app-base-modal>
 <header *ngIf="isLoggedIn()">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/register">Register</a>
-    <!-- Add more navigation links as needed -->
-    <button (click)="logout()">Logout</button>
+    <div class="header-button-row">
+      <div class="flex-container">
+        <div class="button-container">
+          <a routerLink="/">
+            <button mat-fab aria-label="Home" routerLink="/">
+              <mat-icon>home</mat-icon>
+            </button>
+          </a>
+        </div>
+        <div class="button-container">
+          <a routerLink="/register">
+            <button mat-fab aria-label="Register" routerLink="/register">
+              <mat-icon>app_registration</mat-icon>
+            </button>
+          </a>
+        </div>
+        <div class="button-container">
+          <button mat-fab aria-label="Logout" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
   </nav>
 </header>
 <main>
