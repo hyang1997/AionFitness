@@ -84,7 +84,7 @@ export class RegisterComponent {
   
   loginWithGoogle(): void {
     this.authService.loginWithGoogle().subscribe(() => {
-      this.router.navigateByUrl('/');
+      this.router.navigate(['/home-page']);
     });
   }
 
