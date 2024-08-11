@@ -25,6 +25,7 @@ import { RegisterComponent } from "./register/register.component";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'aionfitness';
   showModal: boolean = false;
   modalContent: string = '';
   constructor(private authService: AuthService) {}

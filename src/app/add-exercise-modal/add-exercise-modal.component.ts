@@ -11,7 +11,7 @@ import { NgFor, NgIf } from '@angular/common';
   styleUrls: ['./add-exercise-modal.component.scss']
 })
 export class AddExerciseModalComponent extends BaseModalComponent implements OnInit {
-  @Input() override showModal: boolean = false;
+  @Input() override showModal = false;
   @Output() workoutListChange = new EventEmitter<string[]>();
   workouts: any[] = [];
   filteredWorkouts: any[] = [];

@@ -11,7 +11,6 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { provideHttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
-
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), provideClientHydration(),
