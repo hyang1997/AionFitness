@@ -44,10 +44,6 @@ export class AppComponent {
   logout(): void {
     this.authService.logout();
   }
-  workouts = [
-    { id: 1, name: 'Squat', description: 'Squats are great for leg strength.' },
-    { id: 2, name: 'Bench Press', description: 'Bench presses are great for chest strength.' }
-  ];
 
   openModal(workout: any) {
     this.modalContent = workout.description;
@@ -58,8 +54,5 @@ export class AppComponent {
   closeModal() {
     this.showModal = false;
   }
-
-  logToConsole() {
-    console.log('Button clicked');
-  }
+  
 }
