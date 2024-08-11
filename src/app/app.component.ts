@@ -32,6 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'aionfitness';
   showModal: boolean = false;
   modalContent: string = '';
   constructor(private authService: AuthService) {}

@@ -2,6 +2,9 @@
   <div class="auth-header">
     <h1>AION FITNESS</h1>
     <p>Welcome back!</p>
+    <button (click)="testSaveSession()"> testSaveSession</button>
+    <button (click)="testSaveTemplate()">testSaveTemplate</button>
+    <button (click)="testAddExercise()">testAddExercise</button>
   </div>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">

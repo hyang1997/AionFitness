@@ -4,6 +4,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { NgIf } from '@angular/common';
+import { dbWriteService } from '../../db.write.service';
 
 @Component({
   selector: 'app-register',
@@ -23,7 +24,8 @@ export class RegisterComponent {
     private authService: AuthService,
     private fb: FormBuilder,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private dbWriteService: dbWriteService,
   ) {
       this.form = this.fb.nonNullable.group({
       username: ['', Validators.required],
@@ -100,6 +102,34 @@ export class RegisterComponent {
   toggleRememberMe(): void {
     this.rememberMe = !this.rememberMe;
   }
+
+  async testSaveSession() {
+    const sessionData = {
+      exercises: [
+        { exerciseId: 'squat', reps: 10, weight: 100 },
+        { exerciseId: 'bench_press', reps: 8, weight: 80 }
+      ]
+    };
+    const userId = 'USER_ID'; // Replace with actual user ID
+    await this.dbWriteService.saveSession(userId, sessionData);
+  }
+
+  async testSaveTemplate() {
+    const exercises = [
+      { exerciseId: 'squat', name: 'Squat' },
+      { exerciseId: 'bench_press', name: 'Bench Press' }
+    ];
+    const userId = 'USER_ID'; // Replace with actual user ID
+    const templateName = 'Strength Training';
+    await this.dbWriteService.saveTemplate(userId, templateName, exercises);
+  }
+  async testAddExercise(){
+    const exercise = 'meme press';
+    const userId = 'user';
+    const bodyPart = 'titties';
+    await this.dbWriteService.addExercise(userId, exercise,bodyPart);
+  }
+
   // Add getters for form controls for easy access in template
   get email() {
     return this.form.get('email');
