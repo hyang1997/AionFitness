@@ -7,6 +7,13 @@
   (close)="closeModal()">
 </app-base-modal>
 <header *ngIf="isLoggedIn()">
+  <button (click)="testSaveSession()"> testSaveSession</button>
+  <button (click)="testSaveTemplate()">testSaveTemplate</button>
+  <button (click)="testAddExercise()">testAddExercise</button>
+  <button (click)="testGetLatestSession()">testGetLatestSession</button>
+  <button (click)="testDb()">testdb</button>
+  <button (click)="testRecord()">testRecord</button>
+  <button (click)="testSetRecord()">testSetRecord</button>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <nav>
     <div class="header-button-row">

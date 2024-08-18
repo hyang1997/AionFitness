@@ -103,33 +103,6 @@ export class RegisterComponent {
     this.rememberMe = !this.rememberMe;
   }
 
-  async testSaveSession() {
-    const sessionData = {
-      exercises: [
-        { exerciseId: 'squat', reps: 10, weight: 100 },
-        { exerciseId: 'bench_press', reps: 8, weight: 80 }
-      ]
-    };
-    const userId = 'USER_ID'; // Replace with actual user ID
-    await this.dbWriteService.saveSession(userId, sessionData);
-  }
-
-  async testSaveTemplate() {
-    const exercises = [
-      { exerciseId: 'squat', name: 'Squat' },
-      { exerciseId: 'bench_press', name: 'Bench Press' }
-    ];
-    const userId = 'USER_ID'; // Replace with actual user ID
-    const templateName = 'Strength Training';
-    await this.dbWriteService.saveTemplate(userId, templateName, exercises);
-  }
-  async testAddExercise(){
-    const exercise = 'meme press';
-    const userId = 'user';
-    const bodyPart = 'titties';
-    await this.dbWriteService.addExercise(userId, exercise,bodyPart);
-  }
-
   // Add getters for form controls for easy access in template
   get email() {
     return this.form.get('email');

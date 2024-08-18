@@ -1,0 +1,525 @@
+[
+    {
+      "userid": "",
+      "name": "Barbell Bench Press",
+      "bodyPart": "Chest",
+      "description": "Good chest workout focusing on overall chest development"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Bench Press",
+      "bodyPart": "Chest",
+      "description": "Chest workout with dumbbells for balanced strength development"
+    },
+    {
+      "userid": "",
+      "name": "Cable Chest Press",
+      "bodyPart": "Chest",
+      "description": "Cable-based chest press for constant tension"
+    },
+    {
+      "userid": "",
+      "name": "Incline Barbell Bench Press",
+      "bodyPart": "Chest",
+      "description": "Targets the upper portion of the chest"
+    },
+    {
+      "userid": "",
+      "name": "Incline Dumbbell Bench Press",
+      "bodyPart": "Chest",
+      "description": "Upper chest workout using dumbbells for greater range of motion"
+    },
+    {
+      "userid": "",
+      "name": "Incline Cable Chest Press",
+      "bodyPart": "Chest",
+      "description": "Cable variant focusing on the upper chest"
+    },
+    {
+      "userid": "",
+      "name": "Decline Barbell Bench Press",
+      "bodyPart": "Chest",
+      "description": "Targets the lower portion of the chest"
+    },
+    {
+      "userid": "",
+      "name": "Decline Dumbbell Bench Press",
+      "bodyPart": "Chest",
+      "description": "Lower chest workout using dumbbells for stability"
+    },
+    {
+      "userid": "",
+      "name": "Decline Cable Chest Press",
+      "bodyPart": "Chest",
+      "description": "Cable variant focusing on the lower chest"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Squat",
+      "bodyPart": "Legs",
+      "description": "Compound exercise targeting the quadriceps, hamstrings, and glutes"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Squat",
+      "bodyPart": "Legs",
+      "description": "Squat variant using dumbbells for additional stability work"
+    },
+    {
+      "userid": "",
+      "name": "Cable Squat",
+      "bodyPart": "Legs",
+      "description": "Cable variant that provides constant tension during squats"
+    },
+    {
+      "userid": "",
+      "name": "Front Barbell Squat",
+      "bodyPart": "Legs",
+      "description": "Targets the quadriceps more intensely than back squats"
+    },
+    {
+      "userid": "",
+      "name": "Goblet Squat",
+      "bodyPart": "Legs",
+      "description": "Squat performed with a dumbbell held close to the chest"
+    },
+    {
+      "userid": "",
+      "name": "Overhead Barbell Press",
+      "bodyPart": "Shoulders",
+      "description": "Compound movement targeting the deltoids and triceps"
+    },
+    {
+      "userid": "",
+      "name": "Seated Dumbbell Shoulder Press",
+      "bodyPart": "Shoulders",
+      "description": "Dumbbell press for shoulder development"
+    },
+    {
+      "userid": "",
+      "name": "Cable Shoulder Press",
+      "bodyPart": "Shoulders",
+      "description": "Cable variant for shoulder pressing with constant tension"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Deadlift",
+      "bodyPart": "Back",
+      "description": "Full-body exercise primarily targeting the back, glutes, and hamstrings"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Deadlift",
+      "bodyPart": "Back",
+      "description": "Deadlift variant using dumbbells for increased balance and stability work"
+    },
+    {
+      "userid": "",
+      "name": "Cable Deadlift",
+      "bodyPart": "Back",
+      "description": "Cable variant that maintains constant tension throughout the movement"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Row",
+      "bodyPart": "Back",
+      "description": "Exercise focusing on the middle and upper back"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Row",
+      "bodyPart": "Back",
+      "description": "Row variant using dumbbells for unilateral back strength"
+    },
+    {
+      "userid": "",
+      "name": "Cable Row",
+      "bodyPart": "Back",
+      "description": "Cable row variant for middle and upper back"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Curl",
+      "bodyPart": "Arms",
+      "description": "Isolation exercise targeting the biceps"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Curl",
+      "bodyPart": "Arms",
+      "description": "Bicep curl using dumbbells for balanced arm strength"
+    },
+    {
+      "userid": "",
+      "name": "Cable Curl",
+      "bodyPart": "Arms",
+      "description": "Cable variant focusing on the biceps"
+    },
+    {
+      "userid": "",
+      "name": "Hammer Curl",
+      "bodyPart": "Arms",
+      "description": "Curl variant that targets the brachialis muscle"
+    },
+    {
+      "userid": "",
+      "name": "Concentration Curl",
+      "bodyPart": "Arms",
+      "description": "Isolation exercise for peak bicep contraction"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Tricep Extension",
+      "bodyPart": "Arms",
+      "description": "Overhead extension targeting the triceps"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Tricep Extension",
+      "bodyPart": "Arms",
+      "description": "Overhead tricep extension using dumbbells"
+    },
+    {
+      "userid": "",
+      "name": "Cable Tricep Extension",
+      "bodyPart": "Arms",
+      "description": "Cable variant for constant tension during tricep extensions"
+    },
+    {
+      "userid": "",
+      "name": "Skull Crushers",
+      "bodyPart": "Arms",
+      "description": "Tricep isolation exercise performed with a barbell"
+    },
+    {
+      "userid": "",
+      "name": "Close-Grip Bench Press",
+      "bodyPart": "Arms",
+      "description": "Compound movement focusing on the triceps"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Lunges",
+      "bodyPart": "Legs",
+      "description": "Exercise targeting the quads, hamstrings, and glutes"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Lunges",
+      "bodyPart": "Legs",
+      "description": "Lunge variant using dumbbells for added stability"
+    },
+    {
+      "userid": "",
+      "name": "Cable Lunges",
+      "bodyPart": "Legs",
+      "description": "Lunge variant with cable resistance"
+    },
+    {
+      "userid": "",
+      "name": "Leg Press",
+      "bodyPart": "Legs",
+      "description": "Machine-based exercise targeting the quads and glutes"
+    },
+    {
+      "userid": "",
+      "name": "Calf Raises",
+      "bodyPart": "Legs",
+      "description": "Exercise targeting the calf muscles"
+    },
+    {
+      "userid": "",
+      "name": "Standing Calf Raise",
+      "bodyPart": "Legs",
+      "description": "Exercise focusing on the gastrocnemius muscle"
+    },
+    {
+      "userid": "",
+      "name": "Seated Calf Raise",
+      "bodyPart": "Legs",
+      "description": "Calf raise variant focusing on the soleus muscle"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Shrugs",
+      "bodyPart": "Back",
+      "description": "Exercise targeting the trapezius muscles"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Shrugs",
+      "bodyPart": "Back",
+      "description": "Shrug variant using dumbbells for improved range of motion"
+    },
+    {
+      "userid": "",
+      "name": "Cable Shrugs",
+      "bodyPart": "Back",
+      "description": "Cable variant for constant tension during shrugs"
+    },
+    {
+      "userid": "",
+      "name": "Pull-Ups",
+      "bodyPart": "Back",
+      "description": "Upper body exercise focusing on the lats and biceps"
+    },
+    {
+      "userid": "",
+      "name": "Chin-Ups",
+      "bodyPart": "Back",
+      "description": "Pull-up variant with an underhand grip"
+    },
+    {
+      "userid": "",
+      "name": "Lat Pulldown",
+      "bodyPart": "Back",
+      "description": "Machine exercise targeting the lats"
+    },
+    {
+      "userid": "",
+      "name": "Bent-Over Row",
+      "bodyPart": "Back",
+      "description": "Exercise focusing on the middle and lower back"
+    },
+    {
+      "userid": "",
+      "name": "T-Bar Row",
+      "bodyPart": "Back",
+      "description": "Row variant using a T-bar apparatus"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Hip Thrust",
+      "bodyPart": "Glutes",
+      "description": "Exercise targeting the glutes and hamstrings"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Hip Thrust",
+      "bodyPart": "Glutes",
+      "description": "Hip thrust variant using dumbbells for added stability"
+    },
+    {
+      "userid": "",
+      "name": "Cable Hip Thrust",
+      "bodyPart": "Glutes",
+      "description": "Cable variant for hip thrusts"
+    },
+    {
+      "userid": "",
+      "name": "Leg Curl",
+      "bodyPart": "Legs",
+      "description": "Isolation exercise targeting the hamstrings"
+    },
+    {
+      "userid": "",
+      "name": "Seated Leg Curl",
+      "bodyPart": "Legs",
+      "description": "Machine-based leg curl targeting the hamstrings"
+    },
+    {
+      "userid": "",
+      "name": "Lying Leg Curl",
+      "bodyPart": "Legs",
+      "description": "Leg curl performed lying face down"
+    },
+    {
+      "userid": "",
+      "name": "Cable Kickbacks",
+      "bodyPart": "Glutes",
+      "description": "Isolation exercise for glute development"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Good Mornings",
+      "bodyPart": "Back",
+      "description": "Exercise targeting the lower back and hamstrings"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Good Mornings",
+      "bodyPart": "Back",
+      "description": "Good morning variant using dumbbells"
+    },
+    {
+      "userid": "",
+      "name": "Cable Good Mornings",
+      "bodyPart": "Back",
+      "description": "Cable variant for good mornings"
+    },
+    {
+      "userid": "",
+      "name": "Reverse Barbell Curl",
+      "bodyPart": "Arms",
+      "description": "Curl variant targeting the brachialis and forearms"
+    },
+    {
+      "userid": "",
+      "name": "Reverse Dumbbell Curl",
+      "bodyPart": "Arms",
+      "description": "Reverse curl using dumbbells"
+    },
+    {
+      "userid": "",
+      "name": "Reverse Cable Curl",
+      "bodyPart": "Arms",
+      "description": "Cable variant for reverse curls"
+    },
+    {
+      "userid": "",
+      "name": "Leg Extensions",
+      "bodyPart": "Legs",
+      "description": "Isolation exercise targeting the quadriceps"
+    },
+    {
+      "userid": "",
+      "name": "Machine Leg Press",
+      "bodyPart": "Legs",
+      "description": "Machine-based exercise targeting the quads and glutes"
+    },
+    {
+      "userid": "",
+      "name": "Hack Squat",
+      "bodyPart": "Legs",
+      "description": "Machine exercise targeting the quadriceps"
+    },
+    {
+      "userid": "",
+      "name": "Smith Machine Squat",
+      "bodyPart": "Legs",
+      "description": "Squat variant using a Smith machine"
+    },
+    {
+      "userid": "",
+      "name": "Smith Machine Bench Press",
+      "bodyPart": "Chest",
+      "description": "Bench press variant using a Smith machine"
+    },
+    {
+      "userid": "",
+      "name": "Smith Machine Shoulder Press",
+      "bodyPart": "Shoulders",
+      "description": "Shoulder press variant using a Smith machine"
+    },
+    {
+      "userid": "",
+      "name": "Smith Machine Deadlift",
+      "bodyPart": "Back",
+      "description": "Deadlift variant using a Smith machine"
+    },
+    {
+      "userid": "",
+      "name": "Smith Machine Row",
+      "bodyPart": "Back",
+      "description": "Row variant using a Smith machine"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Lateral Raise",
+      "bodyPart": "Shoulders",
+      "description": "Isolation exercise targeting the lateral deltoids"
+    },
+    {
+      "userid": "",
+      "name": "Cable Lateral Raise",
+      "bodyPart": "Shoulders",
+      "description": "Cable variant for lateral raises"
+    },
+    {
+      "userid": "",
+      "name": "Bent-Over Dumbbell Lateral Raise",
+      "bodyPart": "Shoulders",
+      "description": "Exercise focusing on the rear deltoids"
+    },
+    {
+      "userid": "",
+      "name": "Cable Face Pull",
+      "bodyPart": "Shoulders",
+      "description": "Cable exercise targeting the rear deltoids and upper back"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Upright Row",
+      "bodyPart": "Shoulders",
+      "description": "Exercise targeting the traps and deltoids"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Upright Row",
+      "bodyPart": "Shoulders",
+      "description": "Upright row variant using dumbbells"
+    },
+    {
+      "userid": "",
+      "name": "Cable Upright Row",
+      "bodyPart": "Shoulders",
+      "description": "Cable variant for upright rows"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Front Raise",
+      "bodyPart": "Shoulders",
+      "description": "Exercise targeting the front deltoids"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Front Raise",
+      "bodyPart": "Shoulders",
+      "description": "Front raise variant using dumbbells"
+    },
+    {
+      "userid": "",
+      "name": "Cable Front Raise",
+      "bodyPart": "Shoulders",
+      "description": "Cable variant for front raises"
+    },
+    {
+      "userid": "",
+      "name": "Barbell Rollouts",
+      "bodyPart": "Core",
+      "description": "Core exercise focusing on the abs and lower back"
+    },
+    {
+      "userid": "",
+      "name": "Dumbbell Side Bend",
+      "bodyPart": "Core",
+      "description": "Exercise targeting the obliques"
+    },
+    {
+      "userid": "",
+      "name": "Cable Woodchop",
+      "bodyPart": "Core",
+      "description": "Cable exercise targeting the obliques"
+    },
+    {
+      "userid": "",
+      "name": "Hanging Leg Raise",
+      "bodyPart": "Core",
+      "description": "Exercise focusing on the lower abs"
+    },
+    {
+      "userid": "",
+      "name": "Plank",
+      "bodyPart": "Core",
+      "description": "Isometric exercise targeting the core muscles"
+    },
+    {
+      "userid": "",
+      "name": "Russian Twist",
+      "bodyPart": "Core",
+      "description": "Exercise targeting the obliques"
+    },
+    {
+      "userid": "",
+      "name": "Mountain Climbers",
+      "bodyPart": "Core",
+      "description": "Cardio exercise focusing on the core and lower body"
+    },
+    {
+      "userid": "",
+      "name": "Cable Crunch",
+      "bodyPart": "Core",
+      "description": "Cable variant for crunches"
+    }
+  ]
+  

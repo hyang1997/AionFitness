@@ -9,12 +9,19 @@ import { Router } from "@angular/router";
 export class AuthService {
   firebaseAuth = inject(Auth);
   private loggedIn = false;
-  private uid: string | null = null;  // Variable to store the UID
+  private uid: string | null = null;
 
   constructor(private router: Router) {
     this.firebaseAuth.onAuthStateChanged(user => {
-      this.loggedIn = !!user;
-      this.uid = user ? user.uid : null;  // Keep track of UID
+      if (user) {
+        this.loggedIn = true;
+        this.uid = user.uid;
+        localStorage.setItem('uid', this.uid);  // Persist UID
+      } else {
+        this.loggedIn = false;
+        this.uid = null;
+        localStorage.removeItem('uid');
+      }
     });
   }
 
@@ -22,7 +29,8 @@ export class AuthService {
     const promise = createUserWithEmailAndPassword(this.firebaseAuth, email, password)
       .then(response => {
         updateProfile(response.user, { displayName: username });
-        this.uid = response.user.uid;  // Store the UID
+        this.uid = response.user.uid;
+        localStorage.setItem('uid', this.uid);  // Persist UID
         return this.sendVerificationEmail(response.user);
       });
     return from(promise);
@@ -32,7 +40,8 @@ export class AuthService {
     const promise = signInWithEmailAndPassword(this.firebaseAuth, email, password)
       .then(response => {
         this.loggedIn = true;
-        this.uid = response.user.uid;  // Store the UID
+        this.uid = response.user.uid;
+        localStorage.setItem('uid', this.uid);  // Persist UID
         if (rememberMe) {
           localStorage.setItem('userEmail', email);
         } else {
@@ -48,11 +57,24 @@ export class AuthService {
     const promise = signInWithPopup(this.firebaseAuth, provider)
       .then(response => {
         this.loggedIn = true;
-        this.uid = response.user.uid;  
-        localStorage.setItem('uid', this.uid)
+        this.uid = response.user.uid;
+        localStorage.setItem('uid', this.uid);  // Persist UID
         this.router.navigate(['/']);
       });
     return from(promise);
+  }
+
+  getUID(): string | null {
+    return this.uid || localStorage.getItem('uid');
+  }
+
+  logout(): void {
+    this.firebaseAuth.signOut().then(() => {
+      this.loggedIn = false;
+      this.uid = null;
+      localStorage.removeItem('uid');
+      this.router.navigate(['/register']);
+    });
   }
 
   sendVerificationEmail(user: User): Promise<void> {
@@ -66,17 +88,5 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return this.loggedIn;
-  }
-
-  getUID(): string | null {
-    return this.uid;
-  }
-
-  logout(): void {
-    this.firebaseAuth.signOut().then(() => {
-      this.loggedIn = false;
-      this.uid = null;  // Clear the UID
-      this.router.navigate(['/register']);
-    });
   }
 }
