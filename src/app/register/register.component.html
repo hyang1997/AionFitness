@@ -1,40 +1,54 @@
-<div class="auth-container">
-  <div class="auth-header">
-    <h1>AION FITNESS</h1>
-    <p>Welcome back!</p>
-  </div>
-
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <input id="email" formControlName="email" type="email" placeholder="name@email.com" />
+  <div class="auth-container">
+    <div class="auth-header">
+      <img src="assets/logo.png" alt="App Logo" class="logo" />
+      <h1>{{ mode === 'register' ? 'Sign Up For Free' : 'Sign In' }}</h1>
+      <p>{{ mode === 'register' ? 'Quickly make your account in 1 minute' : 'Welcome back! Please login to your account.' }}</p>
     </div>
-    <div class="form-group">
-      <input id="password" formControlName="password" type="password" placeholder="Password" />
-    </div>
-    <div class="form-actions">
-      <label>
-        <input type="checkbox" (change)="toggleRememberMe()" [checked]="rememberMe" /> Remember me
-      </label>
-      <a href="#" class="reset-password" (click)="resetPassword()">Reset password</a>
-    </div>
-    <button type="submit" [disabled]="form.invalid" class="sign-in-button">{{ mode === 'register' ? 'Sign up' : 'Sign in' }}</button>
-  </form>
 
-  <p class="signup-link">
-    Don't have an account? <a href="#" (click)="setMode('register')">Sign up</a>
-  </p>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-group">
+          <img src="assets/email-icon.png" alt="Email Icon" />
+          <input id="email" formControlName="email" type="email" placeholder="name@email.com" />
+        </div>
+      </div>
 
-  <div class="divider">or</div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <img src="assets/password-icon.png" alt="Lock Icon" />
+          <input id="password" formControlName="password" [type]="showPassword ? 'text' : 'password'" placeholder="Password" />
+          <img src="assets/show-password.png" alt="Show Password Icon" class="show-password" (click)="togglePasswordVisibility()" />
+        </div>
+      </div>
 
-  <button (click)="loginWithGoogle()" class="google-login">
-    <img src="assets/google-icon.png" alt="Google Icon" />
-    Continue with Google
-  </button>
+      <div *ngIf="mode === 'register'" class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-group" [ngClass]="{'error': form.hasError('mismatch') && confirmPassword?.touched}">
+          <img src="assets/password-icon.png" alt="Lock Icon" />
+          <input id="confirmPassword" formControlName="confirmPassword" [type]="showPassword ? 'text' : 'password'" placeholder="Confirm Password" />
+          <img src="assets/show-password.png" alt="Show Password Icon" class="show-password" (click)="togglePasswordVisibility()" />
+        </div>
+        <div *ngIf="form.hasError('mismatch') && confirmPassword?.touched" class="error-message">
+          <img src="assets/error-icon.png" alt="Error Icon" />
+          ERROR: Password Don't Match!
+        </div>
+      </div>
 
-  <div *ngIf="resetMessage" class="reset-message">
-    {{ resetMessage }}
+      <button type="submit" [disabled]="form.invalid" class="sign-in-button">
+        {{ mode === 'register' ? 'Sign Up' : 'Sign In' }}
+      </button>
+    </form>
+    <div class="divider">or</div>
+
+    <button (click)="loginWithGoogle()" class="google-login">
+      <img src="assets/google-icon.png" alt="Google Icon" />
+    </button>
+    <p class="signup-link">
+      {{ mode === 'register' ? 'Already have an account?' : "Don't have an account?" }}
+      <a href="#" (click)="setMode(mode === 'register' ? 'login' : 'register'); $event.preventDefault();">
+        {{ mode === 'register' ? 'Sign In' : 'Sign Up' }}.
+      </a>
+    </p>
   </div>
-  <div *ngIf="verificationMessage" class="verification-message">
-    {{ verificationMessage }}
-  </div>
-</div>
