@@ -31,8 +31,8 @@
           <img src="assets/show-password.png" alt="Show Password Icon" class="show-password" (click)="togglePasswordVisibility()" />
         </div>
         <div *ngIf="form.hasError('mismatch') && confirmPassword?.touched" class="error-message">
-          <img src="assets/error-icon.png" alt="Error Icon" />
-          ERROR: Password Don't Match!
+          <img src="assets/error-icon.svg" alt="Error Icon" />
+        Password Don't Match!
         </div>
       </div>
 

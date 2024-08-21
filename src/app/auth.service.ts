@@ -2,7 +2,7 @@ import { Injectable, inject } from "@angular/core";
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendEmailVerification, sendPasswordResetEmail, updateProfile, User } from "@angular/fire/auth";
 import { from, Observable } from "rxjs";
 import { Router } from "@angular/router";
-
+import { dbWriteService } from "../db.write.service";
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +11,10 @@ export class AuthService {
   private loggedIn = false;
   private uid: string | null = null;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router, 
+    private db :dbWriteService) {
+
     this.firebaseAuth.onAuthStateChanged(user => {
       if (user) {
         this.loggedIn = true;
@@ -88,5 +91,10 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return this.loggedIn;
+  }
+
+  async isAdmin(): Promise<boolean> {
+    const role = await this.db.getUserRole(this.uid);
+    return role === 'admin';
   }
 }

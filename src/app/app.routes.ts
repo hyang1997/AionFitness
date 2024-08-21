@@ -5,6 +5,8 @@ import { ExercisesComponent } from './exercises/exercises.component';
 import { TemplateComponent } from './template/template.component';
 import { AuthGuard } from './auth.guard';
 import { HomePageComponent } from './home-page/home-page.component';
+import { TestPageComponent } from './test-page/test-page.component';
+import { AdminGuard } from './admin.guard';
 export const routes: Routes = [
     {path: '', redirectTo: 'home-page', pathMatch: 'full' },
     {path: 'history', component :HistoryComponent, canActivate:[AuthGuard]},
@@ -12,5 +14,6 @@ export const routes: Routes = [
     {path: 'exercises', component: ExercisesComponent, canActivate:[AuthGuard]},
     {path: 'template', component:TemplateComponent, canActivate:[AuthGuard]},
     {path: 'home-page', component:HomePageComponent, canActivate:[AuthGuard]},
+    {path: 'test-page', component:TestPageComponent, canActivate:[AdminGuard]},
     { path: '**', redirectTo: '' }
 ];

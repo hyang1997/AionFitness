@@ -26,6 +26,7 @@ export class RegisterComponent {
     private fb: FormBuilder,
     private router: Router,
     private http: HttpClient,
+    private db:dbWriteService
   ) {
     // Initialize the form property here
     this.form = this.initializeForm(this.mode);
@@ -65,6 +66,7 @@ onSubmit(): void {
         .register(rawForm.email, rawForm.username, rawForm.password)
         .subscribe(() => {
           this.verificationMessage = 'A verification email has been sent. Please check your inbox.';
+          this.db.InitializeUser(this.authService.getUID());
         });
     } else {
       this.authService

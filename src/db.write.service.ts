@@ -2,7 +2,7 @@ import { Firestore, getFirestore } from "@angular/fire/firestore";
 import { writeBatch, doc } from "@angular/fire/firestore";
 import { updateDoc } from "@angular/fire/firestore";
 import { Injectable, inject } from "@angular/core";
-import { collection, addDoc, getDocs, setDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs, setDoc, getDoc } from "firebase/firestore";
 import { query, where, orderBy, limit } from "firebase/firestore";
 import workoutData from "./app/base-workout.json"
 import { from, Observable } from "rxjs";
@@ -27,12 +27,32 @@ export class dbWriteService{
       }
     }
   }
-    async InitializeUserRole(userId: string){
+  async getUserRole(userId: string | null): Promise<string | undefined> {
+    if (userId) {
+      const docRef = doc(this.db, "users", userId);
+      const docData = await getDoc(docRef);
+
+      if (docData.exists()) {
+        console.log(docData.data()['role']);
+        return docData.data()['role'];
+      } else {
+        // docSnap.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }
+    console.log(undefined);
+    return undefined; // Return undefined if userId is null or no document is found
+  }
+    async InitializeUserRole(userId: string | null){
       if(userId){
         setDoc(doc(this.db, 'users', userId), {
-          "roles": "user",
-        })
+          "role": "user",
+        });
       }
+    }
+    async InitializeUser(userId: string | null){
+      this.InitializeUserRole(userId);
+      this.IntializeWorkoutData(userId);
     }
     async updateWeightRecord(userId: string | null, exerciseRef: string, weightRecord:Number){
       if (userId){
