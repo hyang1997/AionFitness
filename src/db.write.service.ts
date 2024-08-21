@@ -27,6 +27,13 @@ export class dbWriteService{
       }
     }
   }
+    async InitializeUserRole(userId: string){
+      if(userId){
+        setDoc(doc(this.db, 'users', userId), {
+          "roles": "user",
+        })
+      }
+    }
     async updateWeightRecord(userId: string | null, exerciseRef: string, weightRecord:Number){
       if (userId){
         const recordRef = doc(this.db, `users/${userId}/exercises/${exerciseRef}`);

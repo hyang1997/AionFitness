@@ -41,7 +41,6 @@ export class RegisterComponent {
       });
     } else {
       return this.fb.group({
-        username: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
         password: ['', Validators.required],
         confirmPassword: ['', Validators.required],
