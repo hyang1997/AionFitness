@@ -1,26 +1,43 @@
 <!-- app.component.html -->
-<main id="content">
+<div id="overlay" class="overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+
+<main id="content" [ngStyle]="{'margin-left.px': menuOpen ? 250 : 0}">
 </main>
+
 <app-base-modal 
   [showModal]="showModal"
   [modalContent]="modalContent"
   (close)="closeModal()">
 </app-base-modal>
+
 <header *ngIf="isLoggedIn()">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  
+  <!-- Sliding Menu -->
+  <div id="menu" class="menu" [ngStyle]="{'width.px': menuOpen ? 250 : 0}">
+    <button mat-icon-button class="close-btn" (click)="closeMenu()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <a mat-button routerLink="/profile" (click)="closeMenu()">Profile</a>
+    <a mat-button routerLink="/history" (click)="closeMenu()">History</a>
+    <a mat-button routerLink="/exercises" (click)="closeMenu()">Exercises</a>
+    <a mat-button routerLink="/ai" (click)="closeMenu()">AI</a>
+  </div>
+  
   <nav>
     <div class="header-button-row">
       <div class="flex-container">
         <div class="button-container">
           <a routerLink="/home-page">
-            <button mat-fab aria-label="Home" routerLink="/home-page">
+            <button mat-fab aria-label="Home">
               <mat-icon>home</mat-icon>
             </button>
           </a>
         </div>
         <div class="button-container">
           <a routerLink="/test-page">
-            <button mat-fab aria-label="Register" routerLink="/test-page">
+            <button mat-fab aria-label="Register">
               <mat-icon>app_registration</mat-icon>
             </button>
           </a>
@@ -30,22 +47,23 @@
             <mat-icon>logout</mat-icon>
           </button>
         </div>
+        <button mat-icon-button (click)="toggleMenu()">
+          <mat-icon class="menu-icon">menu</mat-icon>
+        </button>
       </div>
     </div>
   </nav>
 </header>
+
 <main>
   <router-outlet *ngIf="isLoggedIn()"></router-outlet>
   <app-register *ngIf="!isLoggedIn()"></app-register>
 </main>
+
 <footer *ngIf="isLoggedIn()">
   <nav>
     <ul>
-      <li><a routerLink="/profile" data-target="Profile">Profile</a></li>
-      <li><a routerLink="/history" data-target="history">History</a></li>
       <li><a routerLink="/start-workout" data-target="start-workout">Start Workout</a></li>
-      <li><a routerLink="/exercises" data-target="exercises">Exercises</a></li>
-      <li><a routerLink="/ai" data-target="ai">AI</a></li>
     </ul>
   </nav>
 </footer>

@@ -12,6 +12,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { dbWriteService } from '../db.write.service';
 import { TestPageComponent } from './test-page/test-page.component';
+import { MatMenuModule } from '@angular/material/menu';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -28,6 +29,7 @@ import { TestPageComponent } from './test-page/test-page.component';
     MatButtonModule, 
     MatDividerModule, 
     MatIconModule,
+    MatMenuModule,
     TestPageComponent
 ],
   templateUrl: './app.component.html',
@@ -41,7 +43,19 @@ export class AppComponent {
   constructor(
     private authService: AuthService,
     private dbWriteService:dbWriteService) {}
+    menuOpen = false;
 
+    openMenu() {
+      this.menuOpen = true;
+    }
+  
+    closeMenu() {
+      this.menuOpen = false;
+    }
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+    }
+    
   isLoggedIn(): boolean {
     return this.authService.isLoggedIn();
   }

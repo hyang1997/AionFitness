@@ -10,10 +10,11 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { provideHttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), provideClientHydration(),
     provideHttpClient(),
-    importProvidersFrom(ReactiveFormsModule), provideFirebaseApp(() => initializeApp(environment.firebaseconfig)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideStorage(() => getStorage())]
+    importProvidersFrom(ReactiveFormsModule), provideFirebaseApp(() => initializeApp(environment.firebaseconfig)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideStorage(() => getStorage()), provideAnimationsAsync()]
 };

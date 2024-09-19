@@ -15,7 +15,7 @@ import { passwordMatchValidator } from '../../validator';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  mode: 'login' | 'register' = 'register'; // Start with 'register' by default
+  mode: 'login' | 'register' = 'login'; // Start with 'register' by default
   form: FormGroup; // Declare form property
   verificationMessage: string | null = null;
   resetMessage: string | null = null;
